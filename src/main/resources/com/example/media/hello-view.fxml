@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="vbox" alignment="CENTER" prefWidth="800.0" spacing="20.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.media.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <MediaView fx:id="mvVideo" fitHeight="300.0" fitWidth="800.0" style="-fx-cursor: hand;" />
+      <Slider fx:id="sliderTime" style="-fx-cursor: hand;" translateY="10.0" />
+      <HBox fx:id="hboxControls" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: grey;">
+         <children>
+            <Button fx:id="button" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-cursor: hand;" translateY="35.0">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="button1" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-cursor: hand;" translateY="35.0">
+               <HBox.margin>
+                  <Insets left="35.0" />
+               </HBox.margin></Button>
+            <Button fx:id="button2" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-cursor: hand; -fx-background-color: red;" translateY="35.0">
+               <HBox.margin>
+                  <Insets left="48.0" />
+               </HBox.margin></Button>
+            <HBox fx:id="hboxVolume" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="labelVolume" style="-fx-cursor: hand;" />
+                  <Slider fx:id="sliderVolume" max="1.0" style="-fx-cursor: hand;">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin></Slider>
+               </children>
+            </HBox>
+            <Label fx:id="labelCurrentTime" style="r: red;" textFill="#f20c0c">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Jokerman" size="18.0" />
+               </font></Label>
+            <Label fx:id="labelTotalTime" textFill="#ee1111">
+               <font>
+                  <Font name="Jokerman" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets right="10.0" />
+               </padding></Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="labelFullScreen" style="-fx-cursor: hand;">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="labelSpeed" style="-fx-cursor: hand;" textFill="#ee0b0b">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+               </children></HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
